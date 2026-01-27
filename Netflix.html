@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflix clone</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: black;
+        }
+        .header{
+            background-image: url(assets/image/bg.jpg);
+            background-position: center center;
+            height: 80vh;
+            position: relative;
+          
+        }
+        .box{
+            height: 80vh;
+            width: 100%;
+            filter: opacity(0.75);
+            background-color: black;
+            position: absolute;
+            top: 0;
+        }
+        nav{
+            max-width: 80vw;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 105px;
+        }
+        nav img{
+            
+            width: 200px;
+            position: relative;
+            z-index: 10;
+        }
+        .flex{
+            position: relative;
+            z-index: 10;
+            gap: 19px;
+            display: flex;
+        }
+        .btn1{
+            padding: 8px;
+            width: 8vw;
+            border-radius: 4px;
+            background-color: rgba(30, 24, 24, 0.152);
+            color: white;
+            border: 1px solid rgb(204, 197, 197);
+        }
+        .btn1 select{
+            color: #ffffff;
+            background-color: rgba(30, 24, 24, 0.152);
+            font-weight: bold;
+            border: unset;
+        }
+        .btn2{
+            padding: 8px;
+            width: 5vw;
+            border-radius: 4px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        .heading{
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #ffffff;
+            margin-top: 24px;
+        }
+        .heading h1{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-weight: 900;
+            font-size: 50px;
+            width: 39vw;
+            text-align: center;
+        }
+        .heading h2{
+             margin-top: 14px;
+        }
+        .heading p{
+            margin-top: 40px;
+        }
+        .email{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 38px;
+        margin-top: 16px;
+        }
+        .email input{
+            background-color: rgba(30, 24, 24, 0.152);
+            border: 1px solid rgb(204, 197, 197);
+            padding: 16px;
+            font-size: 22px;
+            width: 26vw;
+            border-radius: 4px;
+            position: relative;
+            z-index: 10;  
+        }
+        ::placeholder{
+            color: white;
+        }
+        .btn{
+            padding: 16px;
+            border-radius: 7px;
+            width: 11vw;
+            font-size: 22px;
+            position: relative;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+
+        }
+        .seperation{
+            width: 100%;
+            height: 10px;
+            background-color: rgb(176, 170, 170);
+        }
+        main{
+            margin-top: 90px;
+        }
+        .gap{
+            width: 80vw;
+            margin: auto;
+        }
+        .title{
+            color: white;
+            font-size: 28px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            padding: 14px;
+        }
+        .box1{
+            color: white;
+            border: none;
+            width: 13vw;
+            padding: 48px;
+            height: 20vh;
+            border-radius: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #201e33d6;
+            padding-left: 13px;
+            gap: 3px;
+
+        }
+        .box2{
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .letter{
+            margin-bottom: 100px;
+            filter: opacity(0.5);
+        }
+        .box3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .section1{
+            margin:auto;
+            width: 80vw;
+            margin-top: 67px;
+        }
+        .title1{
+            color: white;
+            font-size: 26px;
+            font-weight: bolder;
+            margin-bottom: 19px;
+        }
+        .fox{
+
+        }
+        .fox1{
+            color: white;
+            background-color: rgb(51, 49, 49);
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .letter1{
+            color: white;
+            font-size: 43px;
+            padding-left: 800px;
+        }
+        .fox{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            
+        }
+        .patel{
+            color: white;
+            text-align: center;
+            margin-top: 62px;
+
+        }
+        .space{
+            height: 20vh;
+        }
+        .f{
+            color:black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <span><img src="assets/logo.svg" alt="" width="53px"></span>
+            <div class="flex">
+                <button class="btn1">
+                <select name="" id="hi-IN">
+                <option lang="hi" label="English" value="hi-IN" >English</option>
+                <option lang="hi" label="हिन्दी" value="hi-IN" >हिन्दी</option></select>
+                </button>
+                <button class="btn2">Sign In</button>
+            </div>
+        </nav>
+        <div class="box"></div>
+        <div class="heading">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <h2>Starts at ₹149. Cancel at any time.</h2>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        </div>
+        <div class="email">
+             <input type="text" placeholder="Email address">
+             <button class="btn">GetStarted ></button>
+        </div>
+    </div>
+    <div class="seperation"></div>
+    <main>
+        <div class="gap">
+        <div class="title">More reasons to join</div>
+        <div class="box3">
+        <div class="box1">
+            <div class="box2">Enjoy on your TV</div>
+            <p class="letter">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+        </div>
+
+        <div class="box1">
+            <div class="box2">Download your shows to watch offline</div>
+            <p class="letter">Save your favourites easily and always have something to watch.</p>
+        </div>
+
+        <div class="box1">
+            <div class="box2">Watch everywhere</div>
+            <p class="letter">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+        </div>
+
+        <div class="box1">
+            <div class="box2">Create profiles for kids</div>
+            <p class="letter">Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+        </div>
+        </div>
+        </div>
+    </main>
+    <section>
+        <div class="section1">
+        <div class="title1">Frequently Asked Questions</div>
+        <div class="fox">
+            <div class="fox1">
+                What is Netflix?
+                 <p class="letter1">+</p>
+            </div>
+            <div class="fox1">
+                How much does Netflix cost?
+                 <p class="letter1">+</p>
+            </div>
+            <div class="fox1">
+                Where can I watch?
+                 <p class="letter1">+</p>
+            </div>
+            <div class="fox1">
+                How do I cancel?
+                 <p class="letter1">+</p>
+            </div>
+            <div class="fox1">
+                What can I watch on Netflix?
+                 <p class="letter1">+</p>
+            </div>
+            <div class="fox1">
+                Is Netflix good for kids?
+                 <p class="letter1">+</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <div class="patel">Ready to watch? Enter your email to create or restart your membership.</div>
+        <div class="email">
+             <input type="text" placeholder="Email address">
+             <button class="btn">GetStarted ></button>
+        </div>
+        <div class="space">
+
+        </div>
+    </footer>
+
+    <div class="a">
+        <div class="f">Created By:-Revansiddha Sidramappa Sindagi</div>
+    </div>
+</body>
+</html>
